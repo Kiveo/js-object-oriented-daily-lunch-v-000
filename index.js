@@ -50,16 +50,19 @@ class Meal {
     this.id = ++mealId;
     store.meals.push(this);
   }
+
   deliveries(){
     return store.deliveries.filter(delivery => {
       return delivery.mealId === this.id;
     })
   }
+
   customers(){
     return this.deliveries().map(delivery => {
       return delivery.customer();
     })
   }
+
   byPrice(){
     let meal_array = store.meals.slice(0)
     return meal_array.sort(function(a,b) {
