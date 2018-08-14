@@ -41,8 +41,9 @@ class Customer {
       return delivery.meal();
     })
   }
+  const reducer = (accumulator, currentValue) => accumulator + currentValue;
   totalSpent(){
-    this.meals().reduce
+    return this.meals().reduce(reducer);
   }
 }
 
