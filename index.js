@@ -41,9 +41,11 @@ class Customer {
       return delivery.meal();
     })
   }
-  const reducer = (accumulator, currentValue) => accumulator + currentValue;
+  
   totalSpent(){
-    return this.meals().reduce(reducer);
+    return this.meals().reduce(function(accumulator, currentValue, currentIndex, array) {
+      return accumulator + currentValue;
+    });
   }
 }
 
