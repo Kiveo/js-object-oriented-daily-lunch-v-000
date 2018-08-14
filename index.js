@@ -23,9 +23,10 @@ class Neighborhood {
     })
   }
   meals() {
-    return this.deliveries().map(delivery => {
+    let neighborhood_meals = this.deliveries().map(delivery => {
       return delivery.meal();
-    }).uniq
+    })
+    return [...new set(neighborhood_meals)];
   }
 }
 
