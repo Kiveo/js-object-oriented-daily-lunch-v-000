@@ -41,6 +41,9 @@ class Customer {
       return delivery.meal();
     })
   }
+  static totalSpent(){
+    
+  }
 }
 
 class Meal {
