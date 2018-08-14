@@ -60,6 +60,9 @@ class Meal {
       return delivery.customer();
     })
   }
+  byPrice(){
+    return store.meals.sort_by(price);
+  }
 }
 
 class Delivery {
