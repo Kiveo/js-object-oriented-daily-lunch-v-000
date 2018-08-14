@@ -63,11 +63,12 @@ class Meal {
     })
   }
 
-  byPrice() {
+  static byPrice(){
     let meal_array = store.meals.slice(0)
-    return meal_array;
+    return meal_array.sort(function(a,b) {
+      return a.price - b.price;
+    });
   }
-
 }
 
 class Delivery {
