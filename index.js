@@ -41,9 +41,9 @@ class Customer {
       return delivery.meal();
     })
   }
-  
+
   totalSpent(){
-    return this.meals().reduce(function(accumulator, currentValue, currentIndex, array) {
+    return this.meals().reduce(function(accumulator, currentValue) {
       return accumulator + currentValue;
     });
   }
