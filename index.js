@@ -41,8 +41,8 @@ class Customer {
       return delivery.meal();
     })
   }
-  static totalSpent(){
-    
+  totalSpent(){
+    this.meals().reduce
   }
 }
 
