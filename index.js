@@ -68,6 +68,7 @@ class Meal {
     meal_array.sort(function(a,b) {
       return a.price - b.price;
     });
+    return meal_array;
   }
 }
 
