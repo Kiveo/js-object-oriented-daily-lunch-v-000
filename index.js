@@ -37,7 +37,7 @@ class Customer {
     })
   }
   meals(){
-    this.deliveries().forEach(delivery => {
+    return this.deliveries().forEach(delivery => {
       return delivery.meal();
     })
   }
