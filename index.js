@@ -36,6 +36,11 @@ class Customer {
       return delivery.customerId === this.id;
     })
   }
+  meals(){
+    this.deliveries().forEach(delivery => {
+      return delivery.meal();
+    })
+  }
 }
 
 class Meal {
